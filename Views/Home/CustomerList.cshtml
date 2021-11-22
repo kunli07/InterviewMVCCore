@@ -1,0 +1,28 @@
+﻿@using InterviewMVCCore.DB
+@model IEnumerable<Customer>
+
+<h1>Customer List</h1>
+<table>
+
+<thead>
+    <tr>
+        <th>Company Name</th>
+        <th>Region</th>
+        <th>Country</th>
+        <th>Contact Name</th>
+        <th>Phone Number</th>
+    </tr>
+</thead>
+<tbody>
+@foreach(var c in Model)
+{
+    <tr>
+        <td>@c.CompanyName</td>
+        <td>@c.Region</td>
+        <td>@c.Country</td>
+        <td>@c.ContactName</td>
+        <td>@c.Phone</td>
+    </tr>
+}
+</tbody>
+</table>
